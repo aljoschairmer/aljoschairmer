@@ -5,6 +5,7 @@
 
 Here are some ideas to get you started:
 -->
+- 👋 Hi, I’m @aljoschairmer
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning Java, Python and C#
 - 👯 I’m looking to collaborate on ...
