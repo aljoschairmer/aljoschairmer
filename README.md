@@ -6,10 +6,10 @@
 Here are some ideas to get you started:
 -->
 - 👋 Hi, I’m @aljoschairmer
+- 😄 Pronouns: He/Him
 - 🔭 I’m currently working on Java Programms
 - 🌱 I’m currently learning Java, Python and C#
 - 📫 How to reach me: https://links.aljoschairmer.de/
-- 😄 Pronouns: He/Him
 <!--
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
