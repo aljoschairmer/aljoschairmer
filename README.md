@@ -5,7 +5,7 @@
 
 Here are some ideas to get you started:
 -->
-- 👋 Hi, I’m @aljoschairmer
+- 👋 Hi, I’m <a rel="me" href="https://mastodon.social/@AljoschaIrmer">@aljoschairmer</a>
 - 😄 Pronouns: He/Him
 - 🔭 I’m currently working on Java Programms
 - 🌱 I’m currently learning Java, Python and C#
@@ -16,5 +16,3 @@ Here are some ideas to get you started:
 - 💬 Ask me about ...
 - ⚡ Fun fact: ...
 -->
-
-<a rel="me" href="https://mastodon.social/@AljoschaIrmer">Mastodon</a>
