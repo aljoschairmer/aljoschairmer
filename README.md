@@ -7,7 +7,9 @@ Here are some ideas to get you started:
 -->
 - 👋 Hi, I’m <a rel="me" href="https://mastodon.social/@AljoschaIrmer">@aljoschairmer</a>
 - 😄 Pronouns: He/Him
+<!--
 - 🔭 I’m currently working on Java Programms
+-->
 - 🌱 I’m currently learning Java, Python and C#
 - 📫 How to reach me: https://links.aljoschairmer.de/
 <!--
