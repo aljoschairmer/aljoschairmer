@@ -9,6 +9,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: He/Him
 - 🌱 I’m currently learning Java, Python and C#
 - 📫 How to reach me: https://links.aljoschairmer.de/
+<a href="https://app.daily.dev/aljoschairmer"><img src="https://api.daily.dev/devcards/60ffa68f8d7343379e75a84c16253045.png?r=sky" width="400" alt="Aljoscha Irmer's Dev Card"/></a>
 <!--
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
