@@ -17,5 +17,5 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on Java Programms
 -->
 <a href="https://app.daily.dev/aljoschairmer"><img src="https://api.daily.dev/devcards/60ffa68f8d7343379e75a84c16253045.png?r=sky" width="400" alt="Aljoscha Irmer's Dev Card"/></a>
-<!--
 <a rel="me" href="https://mastodon.social/@AljoschaIrmer">Mastodon</a>
+<!--
