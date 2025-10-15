@@ -16,5 +16,6 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 - 🔭 I’m currently working on Java Programms
 -->
-<a href="https://app.daily.dev/aljoschairmer"><img src="https://api.daily.dev/devcards/60ffa68f8d7343379e75a84c16253045.png?r=sky" width="400" alt="Aljoscha Irmer's Dev Card"/></a>
+<a href="https://app.daily.dev/aljoschairmer"><img src="https://api.daily.dev/devcards/60ffa68f8d7343379e75a84c16253045.png?r=sky" width="300" hight="400" alt="Aljoscha Irmer's Dev Card"/></a>
+[![roadmap.sh](https://roadmap.sh/card/tall/68efa12217747caa5acad366?variant=dark&roadmaps=%2Cdocker%2Cdevops%2Cnextjs)](https://roadmap.sh)
 <!--
