@@ -4,7 +4,7 @@
 
 **DevOps Engineer | Full-Stack Developer**
 
-📍 Frankfurt am Main, Germany 🇩🇪 | 🏳️‍🌈 He/Him
+📍 Frankfurt am Main, Germany 🇩🇪
 
 [![Mastodon](https://img.shields.io/badge/Mastodon-@AljoschaIrmer-6364FF?style=flat&logo=mastodon&logoColor=white)](https://mastodon.social/@AljoschaIrmer)
 [![Links](https://img.shields.io/badge/All_Links-aljoschairmer.com-blue?style=flat&logo=linktree&logoColor=white)](https://links.aljoschairmer.com/)
@@ -17,102 +17,26 @@
 
 ## 🚀 About Me
 
-I'm a passionate **DevOps Engineer** and **Full-Stack Developer** specializing in modern web technologies, cloud infrastructure, and automation. I build scalable, secure, and performant applications with a **security-first** and **performance-first** mindset.
+DevOps Engineer and Full-Stack Developer specializing in modern web technologies and cloud infrastructure. I build scalable applications with a focus on security and performance.
 
-- 🔭 **Current Focus**: Building modern web applications with Next.js and React
-- 🌱 **Currently Learning**: Next.js 15, React 19, Advanced DevOps patterns
-- 💼 **Expertise**: Full-Stack Development, Cloud Architecture, DevOps Automation, Security
-- 🏢 **Location**: Frankfurt, Germany
-- 📫 **Contact**: [links.aljoschairmer.com](https://links.aljoschairmer.com/)
-
----
-
-## 💼 Featured Projects
-
-### **🎯 Full-Stack Web Applications**
-- **Tech**: Next.js 15, React 19, TypeScript, PostgreSQL, Redis
-- **Features**: Real-time data synchronization, advanced caching strategies
-- **Focus**: Performance optimization, scalable architectures
-
-### **📊 Statify** - Spotify Analytics Platform
-- Modern Next.js architecture with TanStack Query
-- User authentication with Better-Auth
-- Data visualization and insights
-
-### **🌐 Network Automation Tools**
-- Python-based automation solutions
-- API integration and scripting
-- Monitoring and management systems
+- 🔭 Building modern web apps with Next.js and React
+- 🌱 Learning Next.js 15, React 19, and advanced DevOps patterns
+- 💼 Expertise in Full-Stack Development, Cloud Architecture, and DevOps Automation
+- 📫 Contact: [links.aljoschairmer.com](https://links.aljoschairmer.com/)
 
 ---
 
 ## 🛠️ Tech Stack
 
-### **Languages**
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)
-
-### **Frontend Development**
-- **Frameworks**: Next.js 15, React 19, React Native
-- **State Management**: TanStack Query, React Context
-- **Styling**: Tailwind CSS, shadcn/ui
-- **Tools**: Vite, Webpack
-
-### **Backend Development**
-- **Node.js**: Express, Next.js Server Actions
-- **Python**: Django, FastAPI
-- **Authentication**: Better-Auth, Next-Auth
-- **Validation**: Zod schemas
-
-### **Databases & Caching**
-- **Databases**: PostgreSQL, MySQL
-- **ORM**: Prisma
-- **Caching**: Redis (performance-first approach)
-- **Query Optimization**: Complex SQL, indexing strategies
-
-### **DevOps & Cloud Infrastructure**
-- **Containerization**: Docker, Docker Compose
-- **CI/CD**: GitLab CI/CD, GitHub Actions
-- **Reverse Proxy**: Nginx
-- **Monitoring**: Grafana, Prometheus, Loki
-- **Cloud**: Cloudflare, AWS basics
-- **Security**: CrowdSec integration, vulnerability scanning
-
-### **IoT & Embedded Systems**
-- **Languages**: CircuitPython, MicroPython, C
-- **Protocols**: MQTT, Tasmota
-- **Projects**: Smart home automation, IoT devices
-
----
-
-## 🌟 Working Philosophy
-
-### **🔐 Security-First Approach**
-- Identification and remediation of XSS vulnerabilities
-- Implementation of security best practices
-- Corporate security standards compliance
-- CrowdSec integration for threat detection
-
-### **⚡ Performance-First Mindset**
-- Redis caching strategies
-- Optimistic UI updates
-- Server-side rendering optimization
-- Scalable architectures for high user loads
-
-### **🧹 Clean Code & Best Practices**
-- Systematic error handling
-- TypeScript type safety
-- Modern design patterns
-- Comprehensive code reviews
-
-### **🤖 Automation Mindset**
-- Scripts for repetitive tasks
-- CI/CD pipelines for all projects
-- Infrastructure as Code
-- Automated testing and deployment
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
 
 ---
 
@@ -134,49 +58,10 @@ I'm a passionate **DevOps Engineer** and **Full-Stack Developer** specializing i
 
 ---
 
-## 🎓 Skills Beyond Code
-
-### **🔬 Analytical Skills**
-- Research and technical analysis
-- Methodical problem-solving
-- Documentation and technical writing
-
-### **🎨 Creative Side**
-- UI/UX design
-- Retro gaming enthusiast (TrimUI, CrossMix-OS)
-- Custom firmware development
-
-### **💬 Communication**
-- Technical writing and documentation
-- Translating complex concepts for management
-- Team mentoring and code reviews
-
----
-
-## 🤝 Let's Connect!
-
-I'm always open to collaborating on interesting projects, discussing new technologies, or helping with DevOps challenges!
-
-### **Professional Interests**
-- Modern web architectures
-- DevOps automation
-- Security best practices
-- Performance optimization
-- Open source contributions
-
-### **Currently Active In**
-- ☁️ Cloud communities (daily.dev)
-- 🔧 DevOps forums
-- 🌐 WebDev communities
-
----
-
 <div align="center">
 
 **[🔗 All My Links](https://links.aljoschairmer.com/)**
 
----
-
-<i>⭐️ From <a href="https://github.com/aljoschairmer">aljoschairmer</a> | Built with ❤️ and lots of ☕</i>
+<i>⭐️ From <a href="https://github.com/aljoschairmer">aljoschairmer</a></i>
 
 </div>
