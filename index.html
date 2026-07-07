@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aljoscha Irmer — DevOps Engineer &amp; Full-Stack Developer</title>
-<meta name="description" content="Aljoscha Irmer — DevOps Engineer and Full-Stack Developer based in Frankfurt am Main, Germany.">
+<title>Aljoscha Irmer — DevOps Engineer, Full-Stack Entwickler &amp; Security Researcher</title>
+<meta name="description" content="Aljoscha Irmer — TS Associate DevOps Engineer @ NTT Germany AG & Co. KG. Full-Stack Entwickler, Security Researcher & Reverse Engineer aus Oberursel (Taunus).">
+<meta name="lang" content="de">
 <style>
   :root {
     --bg: #ffffff;
@@ -122,6 +123,47 @@
 
   .stack-badges img { height: 24px; }
 
+  ul.entry-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  ul.entry-list li {
+    padding: 12px 14px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  ul.entry-list .entry-title {
+    font-weight: 600;
+  }
+
+  ul.entry-list .entry-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    display: inline-block;
+    padding: 3px 10px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
   .devcard {
     text-align: center;
   }
@@ -165,8 +207,8 @@
 
   <header>
     <h1>👋 Hi, I'm Aljoscha Irmer</h1>
-    <p class="tagline">DevOps Engineer &amp; Full-Stack Developer</p>
-    <p class="location">📍 Frankfurt am Main, Germany 🇩🇪</p>
+    <p class="tagline">TS Associate DevOps Engineer @ NTT Germany AG &amp; Co. KG · Bad Homburg</p>
+    <p class="location">📍 Lebt in Oberursel (Taunus) · Full-Stack Entwickler, Security Researcher &amp; Reverse Engineer</p>
     <div class="badges">
       <a href="https://mastodon.social/@AljoschaIrmer"><img src="https://img.shields.io/badge/Mastodon-@AljoschaIrmer-6364FF?style=flat&logo=mastodon&logoColor=white" alt="Mastodon"></a>
       <a href="https://links.aljoschairmer.com/"><img src="https://img.shields.io/badge/All_Links-aljoschairmer.com-blue?style=flat&logo=linktree&logoColor=white" alt="All Links"></a>
@@ -176,28 +218,77 @@
   </header>
 
   <section>
-    <h2>🚀 About Me</h2>
-    <p>DevOps Engineer and Full-Stack Developer specializing in modern web technologies and cloud infrastructure. I build scalable applications with a focus on security and performance.</p>
-    <ul class="about-list">
-      <li>🔭 Building modern web apps with Next.js and React</li>
-      <li>🌱 Learning Next.js 15, React 19, and advanced DevOps patterns</li>
-      <li>💼 Expertise in Full-Stack Development, Cloud Architecture, and DevOps Automation</li>
-      <li>📫 Contact: <a href="https://links.aljoschairmer.com/">links.aljoschairmer.com</a></li>
+    <h2>🧑‍💻 Beruflich</h2>
+    <ul class="entry-list">
+      <li><span class="entry-title">Product Owner – Chronos</span><br><span class="entry-desc">Internes Time-Tracking-Tool</span><div class="chips"><span class="chip">Next.js</span><span class="chip">Auth.js</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span></div></li>
+      <li><span class="entry-title">Lead Developer – Pandora</span><br><span class="entry-desc">Salesforce Opportunity Evaluation Tool</span><div class="chips"><span class="chip">Next.js</span><span class="chip">Prisma</span><span class="chip">Redis</span><span class="chip">Better Auth</span><span class="chip">OpenTelemetry</span></div></li>
+      <li><span class="entry-title">DB Schenker</span><br><span class="entry-desc">Netzwerk-Automatisierung</span><div class="chips"><span class="chip">Meraki</span><span class="chip">Python</span></div></li>
+      <li><span class="entry-title">ABSA / NTT TiX</span><br><span class="entry-desc">Integrationsarbeit mit ServiceNow</span></li>
+      <li><span class="entry-title">Bayer</span><br><span class="entry-desc">On-Site LAN Survey Deployment (Leverkusen/Darmstadt)</span></li>
+      <li><span class="entry-title">Zertifizierungsstrategie</span><br><span class="entry-desc">Eigener Excel-Tracker + personalisierter Lernpfad für NTT Certification Bonus</span></li>
     </ul>
   </section>
 
   <section>
-    <h2>🛠️ Tech Stack</h2>
-    <div class="stack-badges">
-      <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white" alt="TypeScript">
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript">
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white" alt="Next.js">
-      <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React">
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
-      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker">
-      <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white" alt="Redis">
+    <h2>🚀 Eigene Projekte</h2>
+    <ul class="entry-list">
+      <li><span class="entry-title">AI Battle Arena Bot</span><br><span class="entry-desc">Deterministische Sub-Millisekunden-Combat-Engine + Multi-Agent-LLM-„Brain" über Redis-Message-Bus via OpenRouter</span><div class="chips"><span class="chip">TypeScript</span><span class="chip">Redis</span><span class="chip">OpenRouter</span></div></li>
+      <li><span class="entry-title">GitHub Copilot Usage Metrics Dashboard</span><br><span class="entry-desc">Analyse des Token-basierten Billing-Modells</span><div class="chips"><span class="chip">Vite</span><span class="chip">React</span><span class="chip">TypeScript</span></div></li>
+      <li><span class="entry-title">ShuttleScore</span><br><span class="entry-desc">Turnier-Tracker für Badminton/Tennis/Padel · <a href="https://shuttlescore.com">shuttlescore.com</a> · inkl. eigenem Bot-Protection-System <strong>ShieldID</strong> (später als npm-Package veröffentlicht)</span><div class="chips"><span class="chip">TanStack Start</span><span class="chip">Better Auth</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span></div></li>
+      <li><span class="entry-title">Metis</span><br><span class="entry-desc">Event-Table-Booking PWA für Messeveranstalter</span><div class="chips"><span class="chip">Next.js</span><span class="chip">Astro</span></div></li>
+      <li><span class="entry-title">Pheme</span><br><span class="entry-desc">Telemetry-Backend + Frontend + npm Telemetry-Client</span><div class="chips"><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Next.js</span></div></li>
+      <li><span class="entry-title">DOM Inspector AI</span><br><span class="entry-desc">Chrome DevTools Extension mit Multi-Provider-AI-Support</span></li>
+      <li><span class="entry-title">BLE-Tools</span><br><span class="entry-desc">Für Magicshine SEEMEE Bike-Light</span></li>
+      <li><span class="entry-title">Schedule Viewer</span><br><span class="entry-desc">Für WeAreDevelopers World Congress 2026 (reverse-engineerte Schedule-API)</span></li>
+      <li><span class="entry-title">X (Twitter) Feed Bias Analysis Tool</span><br><span class="entry-desc">Zwei-Achsen-Politik-Klassifikation</span><div class="chips"><span class="chip">Playwright</span><span class="chip">Neo4j</span></div></li>
+      <li><span class="entry-title">Statify</span><br><span class="entry-desc">Spotify-Analytics-Tool</span></li>
+      <li><span class="entry-title">aljoschairmer.com</span><br><span class="entry-desc">Persönliche Website mit eigenem Proof-of-Work Bot-Protection</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔐 Security Research &amp; Responsible Disclosure</h2>
+    <ul class="entry-list">
+      <li><span class="entry-title">Bryton Sport Android APK</span><br><span class="entry-desc">Reverse Engineering: hardcodierte OAuth-Secrets (8 Plattformen), ungeschützte GPS-Routen-Endpoints, offene AppWrite-DB</span></li>
+      <li><span class="entry-title">Bryton Rider S510 BLE-Protokoll</span><br><span class="entry-desc">Reverse-engineered für Gadgetbridge-Integration</span></li>
+      <li><span class="entry-title">QiTech Control</span><br><span class="entry-desc">Industrial Control System – kritische Findings: unauthenticated API, Command Injection, unsichere Electron-Konfiguration</span></li>
+      <li><span class="entry-title">PackageKit</span><br><span class="entry-desc">Security-Audit, CVE-2026-41651-Analyse</span></li>
+      <li><span class="entry-title">Chronos Black-Box Audit</span><br><span class="entry-desc">Fehlendes Rate Limiting, User-Enumeration, ungeschützter Telemetry-Endpoint</span></li>
+      <li><span class="entry-title">ShuttleScore Pentest</span><br><span class="entry-desc">ShieldID Replay-Vulnerability, Prompt-Injection im AI-Commentary-Endpoint</span></li>
+      <li><span class="entry-title">Weitere Audits</span><br><span class="entry-desc">Träwelling API, ntt-prof.com (GWT-App), justboys.at</span></li>
+      <li><span class="entry-title">helloyanis/age-verification-bypass</span><br><span class="entry-desc">Laufende Analyse der Browser-Extension</span></li>
+      <li><span class="entry-title">Inspiration für ShieldID</span><br><span class="entry-desc">Reverse Engineering von Vercel BotID</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Interessen &amp; Hobbys</h2>
+    <ul class="about-list">
+      <li>🚴 <strong>Radsport:</strong> Rennrad &amp; Gravel, fährt ein Triban GRVL 520 mit Bryton Rider S510 GPS-Computer</li>
+      <li>🍳 <strong>Kochen:</strong> ambitionierter Hobbykoch, Sous-Vide-Equipment</li>
+      <li>🌌 <strong>Stargate:</strong> Franchise-Fan, besonders Atlantis &amp; Charakter McKay</li>
+      <li>🕹️ <strong>Retro Gaming:</strong> TrimUI-Handheld mit CrossMix OS</li>
+      <li>🏸 <strong>Badminton</strong></li>
+      <li>🪴 <strong>Pflanzen:</strong> Zimmerpflanzen in Lechuza PON Mineralsubstrat</li>
+      <li>☕ <strong>Espresso:</strong> Modding von Espressomaschinen mit ESP32-basierten PID-Controllern</li>
+      <li>📈 <strong>Investments:</strong> Portfolio-Analyse auf Trade Republic, Interesse an Healthcare/GLP-1-Sektor</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🛠️ Tech-Stack (bevorzugt)</h2>
+    <div class="chips">
+      <span class="chip">Next.js</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">Prisma</span>
+      <span class="chip">Redis</span>
+      <span class="chip">Auth.js / Better Auth</span>
+      <span class="chip">OpenTelemetry</span>
+      <span class="chip">Python</span>
+      <span class="chip">React</span>
+      <span class="chip">TanStack (Query/Start)</span>
+      <span class="chip">Astro</span>
     </div>
   </section>
 
@@ -218,6 +309,7 @@
   <footer>
     <p><a href="https://links.aljoschairmer.com/">🔗 All My Links</a></p>
     <p>⭐️ From <a href="https://github.com/aljoschairmer">aljoschairmer</a></p>
+    <p>Zuletzt aktualisiert: Juli 2026</p>
   </footer>
 
 </div>
