@@ -50,297 +50,692 @@
 </script>
 <style>
   :root {
-    --bg: #ffffff;
-    --bg-alt: #f6f8fa;
-    --text: #1b1f24;
-    --text-muted: #57606a;
-    --border: #d0d7de;
-    --accent: #6364FF;
-    --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --bg: #fcfcfd;
+    --bg-alt: #f4f5f7;
+    --bg-card: #ffffff;
+    --text: #16181d;
+    --text-muted: #5b636e;
+    --text-faint: #8a919c;
+    --border: #e2e5ea;
+    --accent: #5a5cf0;
+    --accent-soft: rgba(90, 92, 240, 0.09);
+    --card-shadow: 0 1px 2px rgba(15, 18, 26, 0.05);
+    --card-shadow-hover: 0 12px 32px rgba(15, 18, 26, 0.10);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0d1117;
-      --bg-alt: #161b22;
-      --text: #e6edf3;
-      --text-muted: #9198a1;
-      --border: #30363d;
-      --accent: #8385ff;
-      --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+      --bg: #0b0e14;
+      --bg-alt: #11151d;
+      --bg-card: #131824;
+      --text: #e8ecf2;
+      --text-muted: #9aa3b0;
+      --text-faint: #6b7482;
+      --border: #222939;
+      --accent: #8b8dff;
+      --accent-soft: rgba(139, 141, 255, 0.10);
+      --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      --card-shadow-hover: 0 14px 36px rgba(0, 0, 0, 0.5);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0d1117;
-    --bg-alt: #161b22;
-    --text: #e6edf3;
-    --text-muted: #9198a1;
-    --border: #30363d;
-    --accent: #8385ff;
-    --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    --bg: #0b0e14;
+    --bg-alt: #11151d;
+    --bg-card: #131824;
+    --text: #e8ecf2;
+    --text-muted: #9aa3b0;
+    --text-faint: #6b7482;
+    --border: #222939;
+    --accent: #8b8dff;
+    --accent-soft: rgba(139, 141, 255, 0.10);
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --card-shadow-hover: 0 14px 36px rgba(0, 0, 0, 0.5);
   }
   :root[data-theme="light"] {
-    --bg: #ffffff;
-    --bg-alt: #f6f8fa;
-    --text: #1b1f24;
-    --text-muted: #57606a;
-    --border: #d0d7de;
-    --accent: #6364FF;
-    --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --bg: #fcfcfd;
+    --bg-alt: #f4f5f7;
+    --bg-card: #ffffff;
+    --text: #16181d;
+    --text-muted: #5b636e;
+    --text-faint: #8a919c;
+    --border: #e2e5ea;
+    --accent: #5a5cf0;
+    --accent-soft: rgba(90, 92, 240, 0.09);
+    --card-shadow: 0 1px 2px rgba(15, 18, 26, 0.05);
+    --card-shadow-hover: 0 12px 32px rgba(15, 18, 26, 0.10);
   }
 
   * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
 
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
   }
 
   .wrap {
-    max-width: 720px;
+    max-width: 860px;
     margin: 0 auto;
-    padding: 64px 20px 48px;
+    padding: 0 24px 64px;
   }
 
-  header {
-    text-align: center;
-    margin-bottom: 48px;
+  /* ---------- Hero ---------- */
+
+  .hero {
+    min-height: 68vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 96px 0 72px;
   }
 
-  header h1 {
-    font-size: 2rem;
-    margin: 0 0 4px;
+  .hero .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    color: var(--accent);
+    font-size: 0.95rem;
+    margin: 0 0 14px;
+    letter-spacing: 0.02em;
   }
 
-  header .tagline {
-    font-size: 1.05rem;
+  .hero h1 {
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+
+  .hero .role {
+    font-size: clamp(1.3rem, 4vw, 1.9rem);
+    font-weight: 700;
     color: var(--text-muted);
+    letter-spacing: -0.01em;
+    margin: 0 0 22px;
+  }
+
+  .hero .intro {
+    max-width: 560px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin: 0 0 32px;
+  }
+
+  .hero .intro strong { color: var(--text); font-weight: 600; }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 15px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  }
+
+  .social a:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .social a .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.75;
+  }
+
+  /* ---------- Sections ---------- */
+
+  section { margin-bottom: 88px; }
+
+  section > h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 1.45rem;
+    letter-spacing: -0.01em;
     margin: 0 0 8px;
   }
 
-  header .location {
-    color: var(--text-muted);
+  section > h2 .sec-num {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
     font-size: 0.95rem;
-    margin: 0 0 20px;
+    font-weight: 400;
+    color: var(--accent);
   }
 
-  .badges {
+  section > .sec-sub {
+    color: var(--text-faint);
+    font-size: 0.95rem;
+    margin: 0 0 28px;
+    max-width: 620px;
+  }
+
+  /* ---------- Projects ---------- */
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 18px;
+  }
+
+  .project-card {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px 22px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
 
-  .badges img { height: 20px; }
-
-  section {
-    margin-bottom: 40px;
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: var(--card-shadow-hover);
   }
 
-  section h2 {
-    font-size: 1.15rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+  .project-card.featured {
+    grid-column: 1 / -1;
+    background:
+      linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+      linear-gradient(120deg, var(--accent), transparent 60%) border-box;
+    border: 1px solid transparent;
   }
 
-  ul.about-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .project-card.featured:hover {
+    background:
+      linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+      linear-gradient(120deg, var(--accent), var(--accent)) border-box;
   }
 
-  ul.about-list li {
-    padding: 4px 0;
+  .project-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .project-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     color: var(--text);
   }
 
-  .stack-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+  .project-title a { color: inherit; }
+
+  .project-title a:hover { color: var(--accent); text-decoration: none; }
+
+  .project-link {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    color: var(--text-faint);
+    white-space: nowrap;
   }
 
-  .stack-badges img { height: 24px; }
+  .project-link a { color: var(--text-faint); }
+  .project-card:hover .project-link a { color: var(--accent); }
 
-  ul.entry-list {
+  .project-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .project-desc strong { color: var(--text); font-weight: 600; }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    margin-top: 4px;
+  }
+
+  .tags span {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 3px 8px;
+  }
+
+  .badge-pill {
+    align-self: flex-start;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 2px 10px;
+    opacity: 0.9;
+  }
+
+  /* ---------- Professional work ---------- */
+
+  .work-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
   }
 
-  ul.entry-list li {
-    padding: 12px 14px;
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+  .work-list li {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 0 18px;
+    padding: 0 0 26px;
+    position: relative;
   }
 
-  ul.entry-list .entry-title {
-    font-weight: 600;
+  .work-list li::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 8px;
+    justify-self: center;
+    z-index: 1;
   }
 
-  ul.entry-list .entry-desc {
+  .work-list li::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 18px;
+    bottom: -4px;
+    width: 1.5px;
+    background: var(--border);
+  }
+
+  .work-list li:last-child::after { display: none; }
+
+  .work-title {
+    font-weight: 650;
+    font-size: 1.02rem;
+    letter-spacing: -0.005em;
+  }
+
+  .work-desc {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 0.93rem;
+    margin: 2px 0 0;
+  }
+
+  .work-list .tags { margin-top: 8px; }
+
+  .work-list .tags span {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: var(--text-faint);
+  }
+
+  .work-list .tags span::before { content: "#"; opacity: 0.6; }
+
+  /* ---------- Stack ---------- */
+
+  .stack-group { margin-bottom: 20px; }
+
+  .stack-label {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    margin: 0 0 10px;
   }
 
   .chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
   }
 
   .chip {
     display: inline-block;
-    padding: 3px 10px;
-    background: var(--bg-alt);
+    padding: 6px 14px;
+    background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 999px;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
+    transition: border-color 0.18s ease, color 0.18s ease;
   }
 
-  .devcard {
-    text-align: center;
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
+
+  .chip.learning { border-style: dashed; }
+
+  /* ---------- Interests ---------- */
+
+  .interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 14px;
   }
 
-  .devcard img {
+  .interest-card {
+    padding: 16px 18px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .interest-card .emoji { font-size: 1.3rem; display: block; margin-bottom: 6px; }
+
+  .interest-card strong { display: block; font-size: 0.95rem; margin-bottom: 2px; }
+
+  .interest-card span { color: var(--text-muted); font-size: 0.88rem; }
+
+  /* ---------- Extras / stats ---------- */
+
+  .extras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .extras a img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .roadmap {
-    text-align: center;
+  .extras a:hover img {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
   }
 
-  .roadmap img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
+  /* ---------- Footer ---------- */
 
   footer {
     text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    color: var(--text-faint);
+    font-size: 0.88rem;
     border-top: 1px solid var(--border);
-    padding-top: 24px;
+    padding-top: 32px;
   }
 
-  footer a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
+  footer a { font-weight: 600; }
+
+  footer .foot-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 14px;
   }
 
-  footer a:hover { text-decoration: underline; }
-
-  a { color: var(--accent); }
+  @media (max-width: 640px) {
+    .hero { min-height: auto; padding: 72px 0 56px; }
+    section { margin-bottom: 64px; }
+    .project-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <h1>👋 Hi, I'm Aljoscha Irmer</h1>
-    <p class="tagline">Associate DevOps Engineer</p>
-    <p class="location">📍 Frankfurt am Main, Germany</p>
-    <div class="badges">
-      <a href="https://mastodon.social/@AljoschaIrmer"><img src="https://img.shields.io/badge/Mastodon-@AljoschaIrmer-6364FF?style=flat&logo=mastodon&logoColor=white" alt="Mastodon"></a>
-      <a href="https://twitter.com/aljoschairmer"><img src="https://img.shields.io/badge/Twitter-@aljoschairmer-1DA1F2?style=flat&logo=twitter&logoColor=white" alt="Twitter"></a>
-      <a href="https://aljoschairmer.hashnode.dev/"><img src="https://img.shields.io/badge/Blog-Hashnode-2962FF?style=flat&logo=hashnode&logoColor=white" alt="Hashnode Blog"></a>
-      <a href="https://links.aljoschairmer.com/"><img src="https://img.shields.io/badge/All_Links-aljoschairmer.com-blue?style=flat&logo=linktree&logoColor=white" alt="All Links"></a>
-    </div>
+  <header class="hero">
+    <p class="eyebrow">Hi, my name is</p>
+    <h1>Aljoscha Irmer.</h1>
+    <p class="role">I build pipelines, platforms &amp; products.</p>
+    <p class="intro">I'm an <strong>Associate DevOps Engineer &amp; Full-Stack Developer</strong> based in Frankfurt am Main, Germany — automating CI/CD, shipping internal tools with Next.js, and building open-source side projects around sports and cycling.</p>
+    <nav class="social" aria-label="Social links">
+      <a href="https://github.com/aljoschairmer"><span class="dot"></span>GitHub</a>
+      <a href="https://mastodon.social/@AljoschaIrmer"><span class="dot"></span>Mastodon</a>
+      <a href="https://twitter.com/aljoschairmer"><span class="dot"></span>Twitter</a>
+      <a href="https://aljoschairmer.hashnode.dev/"><span class="dot"></span>Blog</a>
+      <a href="https://links.aljoschairmer.com/"><span class="dot"></span>All Links</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>🧑‍💻 Professional</h2>
-    <ul class="entry-list">
-      <li><span class="entry-title">DevOps &amp; CI/CD automation</span><br><span class="entry-desc">Building and maintaining CI/CD pipelines, containerized deployments, and infrastructure automation</span><div class="chips"><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span></div></li>
-      <li><span class="entry-title">Lead Developer – Internal opportunity-evaluation tool</span><div class="chips"><span class="chip">Next.js</span><span class="chip">Prisma</span><span class="chip">Redis</span><span class="chip">Better Auth</span><span class="chip">OpenTelemetry</span></div></li>
-      <li><span class="entry-title">Developer – Internal time-tracking tool</span><div class="chips"><span class="chip">Next.js</span><span class="chip">NextAuth.js</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span></div></li>
-      <li><span class="entry-title">Developer – Network automation for enterprise customers</span><div class="chips"><span class="chip">Meraki</span><span class="chip">Python</span><span class="chip">CI/CD</span></div></li>
-      <li><span class="entry-title">Developer – Internal TIX (Ticket Exchange) projects</span><br><span class="entry-desc">ITSM customer bridge, integration work with ServiceNow</span><div class="chips"><span class="chip">Python</span></div></li>
-      <li><span class="entry-title">Developer – Internal event table-booking PWA for trade show organizers</span><div class="chips"><span class="chip">Next.js</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span></div></li>
-      <li><span class="entry-title">Developer – Internal telemetry backend + frontend + npm telemetry client</span><div class="chips"><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Next.js</span></div></li>
-      <li><span class="entry-title">On-site network deployments for industrial customers</span><div class="chips"><span class="chip">Migration</span><span class="chip">Staging</span></div></li>
-    </ul>
-  </section>
+  <section id="projects">
+    <h2><span class="sec-num">01.</span> Personal Projects</h2>
+    <p class="sec-sub">Things I build in my own time — live products, open-source packages, and experiments.</p>
+    <div class="project-grid">
 
-  <section>
-    <h2>🚀 Personal Projects</h2>
-    <ul class="entry-list">
-      <li><span class="entry-title">ShuttleScore</span><br><span class="entry-desc">Tournament tracker for badminton/tennis/padel · <a href="https://shuttlescore.com">shuttlescore.com</a></span><div class="chips"><span class="chip">TanStack Start</span><span class="chip">Better Auth</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span></div></li>
-      <li><span class="entry-title">Festi</span><br><span class="entry-desc">Social platform for cyclists — plan group rides with route calculation &amp; elevation, route-aware posts, rider groups, and messaging · <a href="https://festicycling.com">festicycling.com</a></span><div class="chips"><span class="chip">Next.js</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">Better Auth</span><span class="chip">Cloudflare Workers</span></div></li>
-      <li><span class="entry-title">radnet-breitensport</span><br><span class="entry-desc">npm library to fetch &amp; parse German recreational cycling events (RTF, CTF, Radmarathon, Gravel, Brevets) from the official BDR Breitensportkalender · <a href="https://www.npmjs.com/package/radnet-breitensport">radnet-breitensport - npm</a></span><div class="chips"><span class="chip">TypeScript</span><span class="chip">npm package</span></div></li>
-      <li><span class="entry-title">X (Twitter) Feed Bias Analysis Tool</span><br><span class="entry-desc">Two-axis political classification</span><div class="chips"><span class="chip">Playwright</span><span class="chip">Neo4j</span><span class="chip">Python</span></div></li>
-      <li><span class="entry-title">Statify</span><br><span class="entry-desc">Spotify analytics tool</span><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">TanStack Start</span><span class="chip">Better Auth</span><span class="chip">Docker</span><span class="chip">Prisma</span></div></li>
-      <li><span class="entry-title">aljoschairmer.com</span><br><span class="entry-desc">Personal website</span></li>
-      <li><span class="entry-title">AI Battle Arena Bot</span><br><span class="entry-desc">Deterministic sub-millisecond combat engine + multi-agent LLM "brain" over a Redis message bus via OpenRouter</span><div class="chips"><span class="chip">TypeScript</span><span class="chip">Redis</span><span class="chip">OpenRouter</span></div></li>
-    </ul>
-  </section>
+      <div class="project-card featured">
+        <span class="badge-pill">Featured</span>
+        <div class="project-head">
+          <span class="project-title"><a href="https://shuttlescore.com">ShuttleScore</a></span>
+          <span class="project-link"><a href="https://shuttlescore.com">shuttlescore.com ↗</a></span>
+        </div>
+        <p class="project-desc">Tournament tracker for badminton, tennis &amp; padel — live scoring, brackets, and player stats. Ships with its own bot-protection system, <strong>ShieldID</strong>.</p>
+        <div class="tags"><span>TanStack Start</span><span>Better Auth</span><span>PostgreSQL</span><span>Redis</span></div>
+      </div>
 
-  <section>
-    <h2>🎯 Interests &amp; Hobbies</h2>
-    <ul class="about-list">
-      <li>🔍 <strong>Reverse Engineering:</strong> Interest in hardware &amp; software reverse engineering (protocols, APIs, embedded devices)</li>
-      <li>🏸 <strong>Badminton</strong></li>
-      <li>🪴 <strong>Plants:</strong> Houseplants</li>
-      <li>☕ <strong>Espresso:</strong> Modding espresso machines with ESP32-based PID controllers</li>
-    </ul>
-  </section>
+      <div class="project-card featured">
+        <span class="badge-pill">Featured</span>
+        <div class="project-head">
+          <span class="project-title"><a href="https://festicycling.com">Festi</a></span>
+          <span class="project-link"><a href="https://festicycling.com">festicycling.com ↗</a></span>
+        </div>
+        <p class="project-desc">Social platform for cyclists — plan group rides with route calculation &amp; elevation profiles, share route-aware posts, and organize rider groups with built-in messaging.</p>
+        <div class="tags"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span><span>Better Auth</span><span>Cloudflare Workers</span></div>
+      </div>
 
-  <section>
-    <h2>🛠️ Preferred Tech Stack</h2>
-    <div class="chips">
-      <span class="chip">Next.js</span>
-      <span class="chip">TypeScript</span>
-      <span class="chip">PostgreSQL</span>
-      <span class="chip">Prisma</span>
-      <span class="chip">Redis</span>
-      <span class="chip">NextAuth.js / Better Auth</span>
-      <span class="chip">OpenTelemetry</span>
-      <span class="chip">Python</span>
-      <span class="chip">React</span>
-      <span class="chip">TanStack (Query/Start)</span>
-      <span class="chip">Astro</span>
-      <span class="chip">Docker</span>
-      <span class="chip">GitHub Actions</span>
-      <span class="chip">CI/CD</span>
+      <div class="project-card">
+        <div class="project-head">
+          <span class="project-title"><a href="https://www.npmjs.com/package/radnet-breitensport">radnet-breitensport</a></span>
+          <span class="project-link"><a href="https://www.npmjs.com/package/radnet-breitensport">npm ↗</a></span>
+        </div>
+        <p class="project-desc">npm library to fetch &amp; parse German recreational cycling events (RTF, CTF, Radmarathon, Gravel, Brevets) from the official BDR Breitensportkalender.</p>
+        <div class="tags"><span>TypeScript</span><span>npm package</span></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-head">
+          <span class="project-title">AI Battle Arena Bot</span>
+        </div>
+        <p class="project-desc">Deterministic sub-millisecond combat engine paired with a multi-agent LLM "brain", communicating over a Redis message bus via OpenRouter.</p>
+        <div class="tags"><span>TypeScript</span><span>Redis</span><span>OpenRouter</span></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-head">
+          <span class="project-title">Statify</span>
+        </div>
+        <p class="project-desc">Spotify analytics tool — self-hosted listening history, trends, and stats dashboards.</p>
+        <div class="tags"><span>TanStack Start</span><span>PostgreSQL</span><span>Better Auth</span><span>Prisma</span><span>Docker</span></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-head">
+          <span class="project-title">X Feed Bias Analysis</span>
+        </div>
+        <p class="project-desc">Analyzes the X (Twitter) feed and classifies content on a two-axis political spectrum, backed by a graph database.</p>
+        <div class="tags"><span>Python</span><span>Playwright</span><span>Neo4j</span></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-head">
+          <span class="project-title"><a href="https://aljoschairmer.com/">aljoschairmer.com</a></span>
+          <span class="project-link">↗</span>
+        </div>
+        <p class="project-desc">This site — a single-file, dependency-free personal website with its own proof-of-work bot protection.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span></div>
+      </div>
+
     </div>
   </section>
 
-  <section>
-    <h2>🌱 Currently Learning</h2>
-    <div class="chips">
-      <span class="chip">Ansible</span>
-      <span class="chip">Kubernetes</span>
+  <section id="work">
+    <h2><span class="sec-num">02.</span> Professional Work</h2>
+    <p class="sec-sub">What I build on the job — internal products, automation, and infrastructure.</p>
+    <ul class="work-list">
+      <li>
+        <div>
+          <div class="work-title">DevOps &amp; CI/CD automation</div>
+          <p class="work-desc">Building and maintaining CI/CD pipelines, containerized deployments, and infrastructure automation.</p>
+          <div class="tags"><span>Docker</span><span>GitHub Actions</span><span>CI/CD</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="work-title">Lead Developer — Internal opportunity-evaluation tool</div>
+          <div class="tags"><span>Next.js</span><span>Prisma</span><span>Redis</span><span>Better Auth</span><span>OpenTelemetry</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="work-title">Developer — Internal time-tracking tool</div>
+          <div class="tags"><span>Next.js</span><span>NextAuth.js</span><span>Prisma</span><span>PostgreSQL</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="work-title">Developer — Network automation for enterprise customers</div>
+          <div class="tags"><span>Meraki</span><span>Python</span><span>CI/CD</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="work-title">Developer — Internal TIX (Ticket Exchange) projects</div>
+          <p class="work-desc">ITSM customer bridge, integration work with ServiceNow.</p>
+          <div class="tags"><span>Python</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="work-title">Developer — Internal event table-booking PWA for trade show organizers</div>
+          <div class="tags"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="work-title">Developer — Internal telemetry backend, frontend &amp; npm telemetry client</div>
+          <div class="tags"><span>FastAPI</span><span>PostgreSQL</span><span>Next.js</span></div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="work-title">On-site network deployments for industrial customers</div>
+          <div class="tags"><span>Migration</span><span>Staging</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="stack">
+    <h2><span class="sec-num">03.</span> Tech Stack</h2>
+    <p class="sec-sub">Tools I reach for by default — and what I'm learning next.</p>
+    <div class="stack-group">
+      <p class="stack-label">Web &amp; Backend</p>
+      <div class="chips">
+        <span class="chip">TypeScript</span>
+        <span class="chip">Next.js</span>
+        <span class="chip">React</span>
+        <span class="chip">TanStack (Query/Start)</span>
+        <span class="chip">Astro</span>
+        <span class="chip">Python</span>
+        <span class="chip">NextAuth.js / Better Auth</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-label">Data &amp; Infrastructure</p>
+      <div class="chips">
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">Prisma</span>
+        <span class="chip">Redis</span>
+        <span class="chip">Docker</span>
+        <span class="chip">GitHub Actions</span>
+        <span class="chip">CI/CD</span>
+        <span class="chip">OpenTelemetry</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-label">Currently Learning</p>
+      <div class="chips">
+        <span class="chip learning">Ansible</span>
+        <span class="chip learning">Kubernetes</span>
+      </div>
     </div>
   </section>
 
-  <section class="devcard">
-    <h2>📊 GitHub Stats</h2>
-    <a href="https://app.daily.dev/aljoschairmer">
-      <img src="https://api.daily.dev/devcards/60ffa68f8d7343379e75a84c16253045.png?r=sky" width="300" alt="Aljoscha Irmer's Dev Card">
-    </a>
+  <section id="beyond">
+    <h2><span class="sec-num">04.</span> Beyond Code</h2>
+    <p class="sec-sub">What keeps me busy when I'm not shipping.</p>
+    <div class="interest-grid">
+      <div class="interest-card">
+        <span class="emoji">🔍</span>
+        <strong>Reverse Engineering</strong>
+        <span>Hardware &amp; software — protocols, APIs, embedded devices</span>
+      </div>
+      <div class="interest-card">
+        <span class="emoji">🏸</span>
+        <strong>Badminton</strong>
+        <span>On court whenever I can</span>
+      </div>
+      <div class="interest-card">
+        <span class="emoji">☕</span>
+        <strong>Espresso</strong>
+        <span>Modding espresso machines with ESP32-based PID controllers</span>
+      </div>
+      <div class="interest-card">
+        <span class="emoji">🪴</span>
+        <strong>Plants</strong>
+        <span>Houseplants</span>
+      </div>
+    </div>
   </section>
 
-  <section class="roadmap">
-    <h2>🗺️ Learning Roadmap</h2>
-    <a href="https://roadmap.sh">
-      <img src="https://roadmap.sh/card/tall/68efa12217747caa5acad366?variant=dark&roadmaps=docker%2Cdevops%2Cnextjs" alt="roadmap.sh progress card">
-    </a>
+  <section id="stats">
+    <h2><span class="sec-num">05.</span> Stats &amp; Roadmap</h2>
+    <div class="extras">
+      <a href="https://app.daily.dev/aljoschairmer">
+        <img src="https://api.daily.dev/devcards/60ffa68f8d7343379e75a84c16253045.png?r=sky" width="300" alt="Aljoscha Irmer's Dev Card">
+      </a>
+      <a href="https://roadmap.sh">
+        <img src="https://roadmap.sh/card/tall/68efa12217747caa5acad366?variant=dark&roadmaps=docker%2Cdevops%2Cnextjs" alt="roadmap.sh progress card">
+      </a>
+    </div>
   </section>
 
   <footer>
-    <p>⭐️ From <a href="https://github.com/aljoschairmer">aljoschairmer</a></p>
-    <p>Last updated: July 2026</p>
+    <div class="foot-links">
+      <a href="https://github.com/aljoschairmer">GitHub</a>
+      <a href="https://mastodon.social/@AljoschaIrmer">Mastodon</a>
+      <a href="https://aljoschairmer.hashnode.dev/">Blog</a>
+      <a href="https://links.aljoschairmer.com/">All Links</a>
+    </div>
+    <p>Designed &amp; built by <a href="https://github.com/aljoschairmer">Aljoscha Irmer</a> · Last updated August 2026</p>
   </footer>
 
 </div>
