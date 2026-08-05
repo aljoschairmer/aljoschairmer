@@ -137,9 +137,19 @@
   .hero {
     min-height: 68vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
     padding: 96px 0 72px;
+  }
+
+  .hero .avatar {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    box-shadow: 0 0 0 6px var(--accent-soft), var(--card-shadow);
+    flex-shrink: 0;
   }
 
   .hero .eyebrow {
@@ -507,7 +517,8 @@
   }
 
   @media (max-width: 640px) {
-    .hero { min-height: auto; padding: 72px 0 56px; }
+    .hero { min-height: auto; padding: 72px 0 56px; flex-direction: column-reverse; align-items: flex-start; gap: 28px; }
+    .hero .avatar { width: 96px; height: 96px; }
     section { margin-bottom: 64px; }
     .project-grid { grid-template-columns: 1fr; }
   }
@@ -517,6 +528,7 @@
 <div class="wrap">
 
   <header class="hero">
+    <div class="hero-text">
     <p class="eyebrow">Hi, my name is</p>
     <h1>Aljoscha Irmer.</h1>
     <p class="role">I build pipelines, platforms &amp; products.</p>
@@ -528,6 +540,8 @@
       <a href="https://aljoschairmer.hashnode.dev/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>Blog</a>
       <a href="https://links.aljoschairmer.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>All Links</a>
     </nav>
+    </div>
+    <img class="avatar" src="https://github.com/aljoschairmer.png" alt="Aljoscha Irmer" width="168" height="168">
   </header>
 
   <section id="projects">
